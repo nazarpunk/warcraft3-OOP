@@ -69,3 +69,9 @@ function Unit.deg(self, deg)
 	SetUnitFacing(self.unit, deg)
 	return self
 end
+
+---@param self Unit
+---@return boolean
+function Unit.alive(self)
+	return UnitAlive(self.unit)
+end
