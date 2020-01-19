@@ -65,7 +65,7 @@ end
 ---@param deg real|nil
 ---@return Unit|real
 function Unit.deg(self, deg)
-	if deg == nil then return math.deg(self.unit) end
+	if deg == nil then return GetUnitFacing(self.unit) end
 	SetUnitFacing(self.unit, deg)
 	return self
 end
