@@ -42,6 +42,15 @@ function Unit.y(self, y)
 end
 
 ---@param self Unit
+---@param z real|nil
+---@return Unit|real
+function Unit.z(self, z)
+	if z == nil then return BlzGetUnitZ(self.unit) end
+	--SetUnitFlyHeight(self.unit, z)
+	return self
+end
+
+---@param self Unit
 ---@param x real|nil
 ---@param y real|nil
 ---@return Unit|real, real
@@ -75,3 +84,4 @@ end
 function Unit.alive(self)
 	return UnitAlive(self.unit)
 end
+
